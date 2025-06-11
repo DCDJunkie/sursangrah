@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ગુજરાતી ભજનોનો સંગ્રહ - મરણ ભજન, લગ્ન ભજન, કૃષ્ણ ભજન, આરતી અને વધુ. અહીં 100+ ભજનોનો સંગ્રહ છે.">
+    <meta name="keywords" content="ગુજરાતી ભજન, મરણ ભજન, લગ્ન ભજન, કૃષ્ણ ભજન, આરતી, ભજન સંગ્રહ">
+    <title>ગુજરાતી ભજન - ભક્તિ ભંડાર</title>
+    
+    <!-- Google Fonts - Gujarati -->
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Baloo+Bhai+2:wght@400;500;600;700&family=Palanquin+Dark:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #8e44ad;
+            --secondary-color: #9b59b6;
+            --light-color: #f5eef8;
+            --dark-color: #2c3e50;
+            --font-normal: 'Baloo Bhai 2', cursive;
+            --font-decorative: 'Shrikhand', cursive;
+            --font-traditional: 'Palanquin Dark', sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: var(--font-normal);
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-family: var(--font-decorative);
+            font-size: 2rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .logo span {
+            color: #f1c40f;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #f1c40f;
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Font Controls */
+        .font-controls {
+            background-color: var(--light-color);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .font-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .font-option label {
+            font-weight: 500;
+        }
+        
+        select, button {
+            padding: 0.3rem 0.5rem;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            font-family: inherit;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .search-box {
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .search-box input {
+            flex: 1;
+            padding: 0.8rem 1rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            font-size: 1rem;
+        }
+        
+        .search-box button {
+            padding: 0 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .search-box button:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        /* Ad Banner */
+        .ad-banner {
+            background-color: #f1f1f1;
+            padding: 1rem;
+            text-align: center;
+            margin: 1.5rem 0;
+            border: 1px dashed #ccc;
+        }
+        
+        /* Categories Section */
+        .categories {
+            padding: 3rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            font-size: 2rem;
+            color: var(--dark-color);
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .category-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .category-img {
+            height: 150px;
+            overflow: hidden;
+        }
+        
+        .category-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .category-info {
+            padding: 1.5rem 1rem;
+        }
+        
+        .category-info h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .category-info p {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1.2rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        /* Popular Bhajans */
+        .popular-bhajans {
+            padding: 3rem 0;
+            background-color: var(--light-color);
+        }
+        
+        .bhajan-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .bhajan-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .bhajan-header {
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .bhajan-header h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .bhajan-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+        
+        .bhajan-content {
+            padding: 1rem;
+            flex: 1;
+        }
+        
+        .bhajan-content p {
+            margin-bottom: 1rem;
+        }
+        
+        .bhajan-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem 1rem;
+        }
+        
+        .audio-player {
+            width: 100%;
+            margin-top: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            position: relative;
+            font-size: 1.2rem;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 1rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+            
+            nav.active {
+                max-height: 300px;
+                padding: 1rem 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 0;
+                padding: 0.5rem 1rem;
+            }
+            
+            .hero {
+                height: 350px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                height: 300px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .search-box {
+                flex-direction: column;
+            }
+            
+            .search-box input {
+                border-radius: 4px;
+                margin-bottom: 0.5rem;
+            }
+            
+            .search-box button {
+                border-radius: 4px;
+                padding: 0.8rem;
+            }
+            
+            .font-controls {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        
+        /* Font Classes */
+        .font-normal {
+            font-family: var(--font-normal);
+        }
+        
+        .font-decorative {
+            font-family: var(--font-decorative);
+        }
+        
+        .font-traditional {
+            font-family: var(--font-traditional);
+        }
+        
+        .font-small {
+            font-size: 0.9rem;
+        }
+        
+        .font-medium {
+            font-size: 1rem;
+        }
+        
+        .font-large {
+            font-size: 1.1rem;
+        }
+        
+        .font-xlarge {
+            font-size: 1.2rem;
+        }
+        
+        .weight-normal {
+            font-weight: 400;
+        }
+        
+        .weight-medium {
+            font-weight: 500;
+        }
+        
+        .weight-bold {
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">ભજન <span>ભંડાર</span></a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">હોમ</a></li>
+                    <li><a href="categories.html">શ્રેણીઓ</a></li>
+                    <li><a href="maran-bhajan.html">મરણ ભજન</a></li>
+                    <li><a href="lagan-bhajan.html">લગ્ન ભજન</a></li>
+                    <li><a href="krishna-bhajan.html">કૃષ્ણ ભજન</a></li>
+                    <li><a href="aarti.html">આરતી</a></li>
+                    <li><a href="contact.html">સંપર્ક</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Font Controls -->
+    <div class="container">
+        <div class="font-controls">
+            <div class="font-option">
+                <label for="fontFamily">ફોન્ટ:</label>
+                <select id="fontFamily">
+                    <option value="normal">સામાન્ય</option>
+                    <option value="decorative">સજાવટી</option>
+                    <option value="traditional">પરંપરાગત</option>
+                </select>
+            </div>
+            
+            <div class="font-option">
+                <label for="fontSize">ફોન્ટ સાઇઝ:</label>
+                <select id="fontSize">
+                    <option value="small">નાનું</option>
+                    <option value="medium" selected>મધ્યમ</option>
+                    <option value="large">મોટું</option>
+                    <option value="xlarge">ખૂબ મોટું</option>
+                </select>
+            </div>
+            
+            <div class="font-option">
+                <label for="fontWeight">ફોન્ટ વજન:</label>
+                <select id="fontWeight">
+                    <option value="normal">સામાન્ય</option>
+                    <option value="medium">મધ્યમ</option>
+                    <option value="bold">બોલ્ડ</option>
+                </select>
+            </div>
+            
+            <button id="resetFonts">ડિફોલ્ટ પર રીસેટ કરો</button>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>ગુજરાતી ભજનોનો અનુપમ સંગ્રહ</h1>
+            <p>100+ ભજનો, આરતીઓ અને સ્તોત્રો એક જ સ્થાને</p>
+            
+            <div class="search-box">
+                <input type="text" placeholder="ભજન શોધો...">
+                <button><i class="fas fa-search"></i> શોધો</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Ad Banner -->
+    <div class="container">
+        <div class="ad-banner">
+            <!-- Google AdSense Ad -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID"
+                crossorigin="anonymous"></script>
+            <!-- Homepage Banner Ad -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                data-ad-slot="YOUR_AD_SLOT_ID"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+    
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">ભજન શ્રેણીઓ</h2>
+            
+            <div class="category-grid">
+                <!-- Category 1 -->
+                <div class="category-card">
+                    <div class="category-img">
+                        <img src="https://via.placeholder.com/300x200" alt="મરણ ભજન">
+                    </div>
+                    <div class="category-info">
+                        <h3>મરણ ભજન</h3>
+                        <p>શોક સમયે ગાવા માટે ભજનો</p>
+                        <a href="maran-bhajan.html" class="btn">જુઓ</a>
+                    </div>
+                </div>
+                
+                <!-- Category 2 -->
+                <div class="category-card">
+                    <div class="category-img">
+                        <img src="https://via.placeholder.com/300x200" alt="લગ્ન ભજન">
+                    </div>
+                    <div class="category-info">
+                        <h3>લગ્ન ભજન</h3>
+                        <p>વિવાહ સમારંભમાં ગાવા માટે ભજનો</p>
+                        <a href="lagan-bhajan.html" class="btn">જુઓ</a>
+                    </div>
+                </div>
+                
+                <!-- Category 3 -->
+                <div class="category-card">
+                    <div class="category-img">
+                        <img src="https://via.placeholder.com/300x200" alt="કૃષ્ણ ભજન">
+                    </div>
+                    <div class="category-info">
+                        <h3>કૃષ્ણ ભજન</h3>
+                        <p>ભગવાન કૃષ્ણને સમર્પિત ભજનો</p>
+                        <a href="krishna-bhajan.html" class="btn">જુઓ</a>
+                    </div>
+                </div>
+                
+                <!-- Category 4 -->
+                <div class="category-card">
+                    <div class="category-img">
+                        <img src="https://via.placeholder.com/300x200" alt="આરતી">
+                    </div>
+                    <div class="category-info">
+                        <h3>આરતી</h3>
+                        <p>વિવિધ દેવી-દેવતાઓની આરતીઓ</p>
+                        <a href="aarti.html" class="btn">જુઓ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Ad Banner -->
+    <div class="container">
+        <div class="ad-banner">
+            <!-- Google AdSense Ad -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID"
+                crossorigin="anonymous"></script>
+            <!-- Homepage Middle Ad -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                data-ad-slot="YOUR_AD_SLOT_ID"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+    
+    <!-- Popular Bhajans Section -->
+    <section class="popular-bhajans">
+        <div class="container">
+            <h2 class="section-title">લોકપ્રિય ભજનો</h2>
+            
+            <div class="bhajan-list">
+                <!-- Bhajan 1 -->
+                <div class="bhajan-card">
+                    <div class="bhajan-header">
+                        <h3>મોરલી બજાવે શ્યામ</h3>
+                        <div class="bhajan-meta">
+                            <span>કૃષ્ણ ભજન</span>
+                            <span><i class="far fa-clock"></i> 4:32</span>
+                        </div>
+                    </div>
+                    <div class="bhajan-content">
+                        <p>મોરલી બજાવે શ્યામ, મનમોહન મોરલી બજાવે શ્યામ...<br>
+                        ગોપીઓને રીઝવવા, મધુરી મોરલી બજાવે શ્યામ...</p>
+                    </div>
+                    <div class="bhajan-actions">
+                        <a href="morli-bajave-shyam.html" class="btn">વાંચો</a>
+                        <button class="play-btn" data-audio="audio/morli-bajave-shyam.mp3">
+                            <i class="fas fa-play"></i> સાંભળો
+                        </button>
+                    </div>
+                    <audio class="audio-player" controls style="display: none;">
+                        <source src="audio/morli-bajave-shyam.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                
+                <!-- Bhajan 2 -->
+                <div class="bhajan-card">
+                    <div class="bhajan-header">
+                        <h3>જય જય ગિરિધારી ગોપાલ</h3>
+                        <div class="bhajan-meta">
+                            <span>કૃષ્ણ ભજન</span>
+                            <span><i class="far fa-clock"></i> 5:15</span>
+                        </div>
+                    </div>
+                    <div class="bhajan-content">
+                        <p>જય જય ગિરિધારી ગોપાલ, જય જય ગિરિધારી...<br>
+                        જય જય મધુસૂદન મુરારી, જય જય ગિરિધારી...</p>
+                    </div>
+                    <div class="bhajan-actions">
+                        <a href="jay-jay-giridhari.html" class="btn">વાંચો</a>
+                        <button class="play-btn" data-audio="audio/jay-jay-giridhari.mp3">
+                            <i class="fas fa-play"></i> સાંભળો
+                        </button>
+                    </div>
+                    <audio class="audio-player" controls style="display: none;">
+                        <source src="audio/jay-jay-giridhari.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                
+                <!-- Bhajan 3 -->
+                <div class="bhajan-card">
+                    <div class="bhajan-header">
+                        <h3>અંબે તુજ આરતી</h3>
+                        <div class="bhajan-meta">
+                            <span>આરતી</span>
+                            <span><i class="far fa-clock"></i> 6:02</span>
+                        </div>
+                    </div>
+                    <div class="bhajan-content">
+                        <p>અંબે તુજ આરતી, ગાઉં રે અંબિકા...<br>
+                        જય જય મહિષાસુર મર્દની, કાળી કપાલિની...</p>
+                    </div>
+                    <div class="bhajan-actions">
+                        <a href="ambe-tuj-aarti.html" class="btn">વાંચો</a>
+                        <button class="play-btn" data-audio="audio/ambe-tuj-aarti.mp3">
+                            <i class="fas fa-play"></i> સાંભળો
+                        </button>
+                    </div>
+                    <audio class="audio-player" controls style="display: none;">
+                        <source src="audio/ambe-tuj-aarti.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="all-bhajans.html" class="btn">બધા ભજનો જુઓ</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Ad Banner -->
+    <div class="container">
+        <div class="ad-banner">
+            <!-- Google AdSense Ad -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID"
+                crossorigin="anonymous"></script>
+            <!-- Homepage Bottom Ad -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                data-ad-slot="YOUR_AD_SLOT_ID"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ભજન ભંડાર</h3>
+                    <p>ગુજરાતી ભજનોનો સંગ્રહ. અહીં તમે વિવિધ પ્રકારના ભજનો, આરતીઓ અને સ્તોત્રો શોધી શકો છો.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>શ્રેણીઓ</h3>
+                    <ul>
+                        <li><a href="maran-bhajan.html">મરણ ભજન</a></li>
+                        <li><a href="lagan-bhajan.html">લગ્ન ભજન</a></li>
+                        <li><a href="krishna-bhajan.html">કૃષ્ણ ભજન</a></li>
+                        <li><a href="aarti.html">આરતી</a></li>
+                        <li><a href="stotra.html">સ્તોત્ર</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>ઉપયોગી લિંક્સ</h3>
+                    <ul>
+                        <li><a href="about.html">અમારા વિશે</a></li>
+                        <li><a href="privacy.html">ગોપનીયતા નીતિ</a></li>
+                        <li><a href="terms.html">નિયમો અને શરતો</a></li>
+                        <li><a href="contact.html">સંપર્ક કરો</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 ભજન ભંડાર. બધા હક્કો આરક્ષિત.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Font Controls
+        const fontFamily = document.getElementById('fontFamily');
+        const fontSize = document.getElementById('fontSize');
+        const fontWeight = document.getElementById('fontWeight');
+        const resetFonts = document.getElementById('resetFonts');
+        const body = document.body;
+        
+        // Apply saved preferences if available
+        if(localStorage.getItem('fontFamily')) {
+            body.classList.add(localStorage.getItem('fontFamily'));
+            fontFamily.value = localStorage.getItem('fontFamily');
+        }
+        
+        if(localStorage.getItem('fontSize')) {
+            body.classList.add(localStorage.getItem('fontSize'));
+            fontSize.value = localStorage.getItem('fontSize');
+        }
+        
+        if(localStorage.getItem('fontWeight')) {
+            body.classList.add(localStorage.getItem('fontWeight'));
+            fontWeight.value = localStorage.getItem('fontWeight');
+        }
+        
+        // Font Family Change
+        fontFamily.addEventListener('change', () => {
+            // Remove all font family classes
+            body.classList.remove('font-normal', 'font-decorative', 'font-traditional');
+            
+            // Add selected class
+            const selectedFont = 'font-' + fontFamily.value;
+            body.classList.add(selectedFont);
+            
+            // Save to localStorage
+            localStorage.setItem('fontFamily', selectedFont);
+        });
+        
+        // Font Size Change
+        fontSize.addEventListener('change', () => {
+            // Remove all font size classes
+            body.classList.remove('font-small', 'font-medium', 'font-large', 'font-xlarge');
+            
+            // Add selected class
+            const selectedSize = 'font-' + fontSize.value;
+            body.classList.add(selectedSize);
+            
+            // Save to localStorage
+            localStorage.setItem('fontSize', selectedSize);
+        });
+        
+        // Font Weight Change
+        fontWeight.addEventListener('change', () => {
+            // Remove all font weight classes
+            body.classList.remove('weight-normal', 'weight-medium', 'weight-bold');
+            
+            // Add selected class
+            const selectedWeight = 'weight-' + fontWeight.value;
+            body.classList.add(selectedWeight);
+            
+            // Save to localStorage
+            localStorage.setItem('fontWeight', selectedWeight);
+        });
+        
+        // Reset Fonts
+        resetFonts.addEventListener('click', () => {
+            // Remove all custom classes
+            body.classList.remove(
+                'font-normal', 'font-decorative', 'font-traditional',
+                'font-small', 'font-medium', 'font-large', 'font-xlarge',
+                'weight-normal', 'weight-medium', 'weight-bold'
+            );
+            
+            // Reset select values
+            fontFamily.value = 'normal';
+            fontSize.value = 'medium';
+            fontWeight.value = 'normal';
+            
+            // Clear localStorage
+            localStorage.removeItem('fontFamily');
+            localStorage.removeItem('fontSize');
+            localStorage.removeItem('fontWeight');
+        });
+        
+        // Audio Player Functionality
+        const playButtons = document.querySelectorAll('.play-btn');
+        let currentlyPlaying = null;
+        
+        playButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const audioSrc = this.getAttribute('data-audio');
+                const audioPlayer = this.parentElement.nextElementSibling;
+                
+                // If this is the currently playing audio, toggle play/pause
+                if(currentlyPlaying === audioPlayer) {
+                    if(audioPlayer.paused) {
+                        audioPlayer.play();
+                        this.innerHTML = '<i class="fas fa-pause"></i> પોઝ';
+                    } else {
+                        audioPlayer.pause();
+                        this.innerHTML = '<i class="fas fa-play"></i> સાંભળો';
+                    }
+                    return;
+                }
+                
+                // Stop any currently playing audio
+                if(currentlyPlaying) {
+                    currentlyPlaying.pause();
+                    const prevButton = currentlyPlaying.previousElementSibling.querySelector('.play-btn');
+                    if(prevButton) prevButton.innerHTML = '<i class="fas fa-play"></i> સાંભળો';
+                }
+                
+                // Play the new audio
+                currentlyPlaying = audioPlayer;
+                audioPlayer.src = audioSrc;
+                audioPlayer.style.display = 'block';
+                audioPlayer.play();
+                this.innerHTML = '<i class="fas fa-pause"></i> પોઝ';
+                
+                // When audio ends, reset button
+                audioPlayer.onended = function() {
+                    button.innerHTML = '<i class="fas fa-play"></i> સાંભળો';
+                    audioPlayer.style.display = 'none';
+                    currentlyPlaying = null;
+                };
+            });
+        });
+        
+        // Search Functionality
+        const searchBox = document.querySelector('.search-box input');
+        const searchButton = document.querySelector('.search-box button');
+        
+        searchButton.addEventListener('click', () => {
+            const searchTerm = searchBox.value.trim();
+            if(searchTerm) {
+                // In a real implementation, this would redirect to search results
+                alert('તમે શોધી રહ્યાં છો: ' + searchTerm);
+                // window.location.href = 'search.html?q=' + encodeURIComponent(searchTerm);
+            }
+        });
+        
+        // Allow search on Enter key
+        searchBox.addEventListener('keypress', (e) => {
+            if(e.key === 'Enter') {
+                searchButton.click();
+            }
+        });
+    </script>
+</body>
+</html>
